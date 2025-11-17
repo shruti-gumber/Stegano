@@ -1,0 +1,327 @@
+<!--<!DOCTYPE html>-->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Steaganography-Secret Encoder</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <div class="wrapper">
+      <!-- end loader -->
+      <div class="sidebar">
+
+         <nav id="sidebar">
+            <div id="dismiss">
+               <i class="fa fa-arrow-left"></i>
+            </div>
+
+            <ul class="list-unstyled components">
+               <li class="active"> <a href="#">Home</a> </li>
+               <li><a href="#about">About </a> </li>
+               <li><a href="#work">Work</a> </li>
+               <li><a href="#choose">Privacy Policy</a> </li>
+            </ul>
+         </nav>
+      </div>
+      <div id="content">
+         <!-- header -->
+         <header>
+            <!-- header inner -->
+            <div class="header">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                           <div class="center-desk">
+                              <div class="logo">
+                                 <a href="index.html"><img src="static/images/logo1.jpg" alt="#" /></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                         <label>Text In Image</label>
+                        <ul class="btn">
+
+                           <li><a href="/index">Log In/Sign Up</a></li>
+                           <li><button type="button" id="sidebarCollapse">
+                              <img src="static/images/menu_icon.png" alt="#" />
+                              </button>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- end header inner -->
+         <!-- end header -->
+
+         <!-- about -->
+         <div id="about"  class="about">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-md-5">
+                     <div class="about_img">
+              </div>
+                  </div>
+
+                  <div class="col-md-7">
+                     <div class="titlepage">
+<!--Main logic to upload image to site-->
+                        {% if umessage %}
+            <div style="
+    position:absolute;
+    left: -600;" >
+                  <a href="./static/uploads/stegano.png" style="position: relative;
+    left: 191px;
+    top: 47px;" download>CLICK HERE TO DOWNLOAD</a>
+            </div>
+            {% endif %}
+    <form method="post"  enctype="multipart/form-data">
+        <dl>
+           <p>
+           <p><textarea name="text_hide" placeholder="ENTER THE TEXT YOU WANT TO HIDE IN THE IMAGE" rows="2" cols="50" style="     border: 6px dashed olive;
+    border-radius: 25px;
+    position: relative;
+    left: -37px;
+    top: -114px;" required></textarea></p>
+           <p><input type="file"  accept="image/*"  id="file" name="file" required onchange="loadFile(event)" style="display: none;"><p>
+                <p><label for="file" style="    cursor: pointer;
+    font-size: 35px;
+    position: relative;
+    left: -18px;
+    top: -215px;"  >Click Here To Upload Image</label></p>
+             <p><img id="output" style=" border: 15px inset;
+    position: relative;
+    top: -221px;
+    left: 3px;" width="350" height="350"></p>
+
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" style="
+     border: 5px double;
+    border-radius: 15px;
+    position: relative;
+    left: 126px;
+    top: -319px;
+    font-size: 22px;
+    " class="btn btn-info">
+        </p>
+
+            </form>
+
+
+
+<!--TODO LOGIC ENDS HERE-->
+            </div>
+         </div>
+         <!-- end about -->
+         <!-- choose  section -->
+
+         <!-- end choose  section -->
+         <!-- work -->
+
+
+
+           <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="row">
+                           <div class="col-md-8 col-sm-6">
+                              <div class="address">
+                                 <h3>  By </h3><br>
+                              </div>
+                              <ul class="social_icon">
+                                 <li><a href="#">Shruti Gumber<i class="fa fa-instagram" aria-hidden="true"></i></a>  </li>
+                              </ul>
+                           </div>
+                           <div class="col-md-4 col-sm-6">
+                              <div class="address">
+                                 <h3>Links</h3>
+                                 <ul class="Menu_footer">
+                                    <li class="active"> <a href="/index">Home</a> </li>
+                                    <li><a href="/decrypt">Decrypt Image </a> </li>
+
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="row">
+                           <div class="col-md-5 col-sm-6">
+                              <div class="address">
+                                 <h3>Feedback </h3>
+                              </div>
+<!--                              <form class="bottom_form">-->
+ <input class="enter" placeholder="Enter Your Name" autocomplete="off" type="text" size="40" style="border:2px solid white; border-radius:35px;margin-top: 15px; " id="namebox">
+                                 <textarea cols="50" rows="6" placeholder="PLEASE WRITE YOUR FEEDBACK" autocomplete="off" style=" margin-top:10px; border: 3px solid white; border-radius:30px;
+
+    margin-bottom: 5px;" id="textbox"></textarea>
+                                 <input class="enter" placeholder="Enter Your Email" type="email" autocomplete="off" size="40" style="border:2px solid white; border-radius:35px" id="mailbox">
+                                 <button class="sub_btn" id="submi" style="margin-top: 15px">Submit</button>
+<!--                              </form>-->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <p>Copyright 2025 to 🎗 All Right Reserved</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- end footer -->
+      </div>
+      <div class="overlay"></div>
+      <!-- Javascript files-->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.bundle.min.js"></script>
+      <script src="static/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="static/js/custom.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(".fancybox").fancybox({
+                 openEffect: "none",
+                 closeEffect: "none"
+             });
+
+             $(".zoom").hover(function() {
+
+                 $(this).addClass('transition');
+             }, function() {
+
+                 $(this).removeClass('transition');
+             });
+         });
+      </script>
+<script>
+   var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+   };
+   </script>
+
+               <script>
+   var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+   };
+   </script>
+ <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBUiToMpgyJYI3EUZ0U4cr3VS-zMzTccfE",
+    authDomain: "python-83560.firebaseapp.com",
+    databaseURL: "https://python-83560-default-rtdb.firebaseio.com",
+    projectId: "python-83560",
+    storageBucket: "python-83560.appspot.com",
+    messagingSenderId: "439817628919",
+    appId: "1:439817628919:web:9fa080fd41b8cf052bf7f2"
+        };
+
+        // Init[ialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase,ref,set,child,update,remove,get}
+        from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+
+        const db=getDatabase();
+
+        // Refrences
+        var namebox=document.getElementById("namebox");
+        var textbox=document.getElementById("textbox");
+        var mailbox=document.getElementById("mailbox");
+
+        var subBtn=document.getElementById("submi");
+
+
+        // Insert function
+
+        function InsertData(){
+            set(ref(db,"TheFeedbacks/"+namebox.value),{
+                NameofPerson:namebox.value,
+                Mail:mailbox.value,
+                Feedback:textbox.value,
+
+            })
+            .then(()=>{
+                alert("DATA STORED SUCCESFULLY");
+            })
+            .catch((error)=>{
+                alert("UNCESSFUL,ERROR"+console.error);
+            });
+        }
+        subBtn.addEventListener('click',InsertData);
+
+
+      </script>
+   </body>
+</html>
+
